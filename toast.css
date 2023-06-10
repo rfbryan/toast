@@ -1,0 +1,53 @@
+body {
+    background-color: #f0f0f0;
+    font-family: arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333333;
+  }
+  
+  p {
+    color: #666666;
+  }
+  
+  #toastfade {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  #toastfade.show {
+    opacity: 1;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  #toastslide {
+    position: fixed;
+    bottom: -100px; /* Initially set to a value that hides the toast */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 9999;
+    opacity: 0;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  #toastslide.show {
+    bottom: 20px; /* Slide the toast up to the desired position */
+    opacity: 1;
+  }
